@@ -1,0 +1,51 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true,
+        "node": true
+    },
+    "globals": {
+        "process": true,
+        "Raven": true
+    },
+    "plugins": ["react"],
+    "extends": "airbnb",
+    "rules": {
+        "indent": ["error", 4, {
+            "SwitchCase": 1
+        }],
+        "max-len": [
+            "error",
+            100,
+            4,
+            {
+                "ignoreRegExpLiterals": true,
+                "ignoreComments": true,
+                "ignoreUrls": true,
+                "ignorePattern": "^\\s*<(?:path|rect|g|polygon|polyline|ellipse|linearGradient|text|use|image|circle|filter|feGaussianBlur|feColorMatrix) .*?>"
+            }
+        ],
+        "no-console": ["error", {
+            "allow": ["error"]
+        }],
+        "linebreak-style": 0,
+        "import/no-unresolved": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/prefer-default-export": 0,
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/destructuring-assignment": ["error", "always", {
+            "ignoreClassFields": true
+        }],
+        "react/prop-types": 0
+    }
+}
